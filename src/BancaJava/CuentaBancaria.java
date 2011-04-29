@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package Bancajava;
+package BancaJava;
 
 import java.util.Date;
 
@@ -52,6 +52,10 @@ public class CuentaBancaria {
         System.out.printf("El numero de cuenta es %d y tiene un saldo de %f \n",
                 numCuenta,saldo);
         System.out.println("La Fecha de apertura es: " + apertura.toString());
+    }
+
+    public void registrarIntereses(){
+        saldo += saldo * tasa;
     }
 }
 

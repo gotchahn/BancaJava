@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package Bancajava;
+package BancaJava;
 
 /**
  *
@@ -16,6 +16,10 @@ public class CuentaPersonal extends CuentaBancaria{
     public CuentaPersonal(int nc){
         super(nc,TASAPERSONAL);
         activo = true;
+    }
+
+    public boolean isActivo(){
+        return activo;
     }
 
     /**
@@ -32,5 +36,10 @@ public class CuentaPersonal extends CuentaBancaria{
             m = m * 0.95;
         }
         saldo += m;
+    }
+
+    @Override
+    public void imprimir(){
+        System.out.println("Soy personal");
     }
 }
