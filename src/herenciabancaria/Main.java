@@ -5,6 +5,8 @@
 
 package herenciabancaria;
 
+import BancaJava.*;
+
 /**
  *
  * @author Carlos Gochez
@@ -15,7 +17,23 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-    }
+        //upcasting
+        CuentaBancaria cb = new CuentaPersonal(1);
+        cb.imprimir();
+
+        //downcasting
+        CuentaPersonal cp = (CuentaPersonal)cb;
+        cp.isActivo();
+        //downcasting directo
+        ((CuentaPersonal)cb).isActivo();
+        
+        //averiguar de que tipo es
+        if( cb instanceof CuentaPlazoFijo ){
+            System.out.println("weee es plazo fijo");
+        }
+        else{
+            System.out.println("noo no es plazo fijo");
+        }
+     }
 
 }
